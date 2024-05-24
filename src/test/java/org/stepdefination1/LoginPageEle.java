@@ -48,7 +48,7 @@ public class LoginPageEle {
 	{
 		System.out.println("Enter in search field");
 		wt.until(ExpectedConditions.visibilityOf(enterinsearch1));
-		enterinsearch1.sendKeys("samsung");
+		enterinsearch1.sendKeys("samsung mobiles");
 		enterinsearch1.sendKeys(Keys.ENTER);
 		//loginbutton.click();
 		//search1.click();

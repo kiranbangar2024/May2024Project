@@ -17,19 +17,23 @@ public class HomePageStepDef {
 	@Given("user is on HomePage of Flipkart")
 	public void when_user_is_on_home_page_of_flipkart() {
 		loginp.EnterinSearchField();
+		
 	}
 
 	@When("user scrolls down the page")
 	public void user_scrolls_down_the_page() {
-		homepage.Scroll_Down1();
-	    
-	    
+		homepage.Scroll_Down1(driver);
+		homepage.Write_Mobile_Names();
+	       
 	}
 
 	@And("user Clicks on next button till the last page")
 	public void user_clicks_on_next_button_till_the_last_page() {
 	    
-	    
+	System.out.println("Next button is displayed:	"+homepage.Visible_nextButton());
+		homepage.next_button(driver);
+		//homepage.Scroll_Down1(driver);
+		//homepage.Write_Mobile_Names();
 	}
 
 	@Then("last page will display")
