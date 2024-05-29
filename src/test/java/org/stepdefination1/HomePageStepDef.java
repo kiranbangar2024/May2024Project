@@ -23,7 +23,7 @@ public class HomePageStepDef {
 	@When("user scrolls down the page")
 	public void user_scrolls_down_the_page() {
 		homepage.Scroll_Down1(driver);
-		homepage.Write_Mobile_Names();
+		//homepage.Write_Mobile_Names();
 	       
 	}
 
@@ -31,8 +31,15 @@ public class HomePageStepDef {
 	public void user_clicks_on_next_button_till_the_last_page() {
 	    
 	System.out.println("Next button is displayed:	"+homepage.Visible_nextButton());
-		homepage.next_button(driver);
-		//homepage.Scroll_Down1(driver);
+	//homepage.Scroll_Down1(driver);
+	
+	while(homepage.pages_all()==true)
+	{
+		System.out.println("in while loop");
+	homepage.next_button();
+
+	}
+		
 		//homepage.Write_Mobile_Names();
 	}
 
